@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'montseratt', sans-serif;
+}
+
+.app {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.75)
+    ),
+    url('./assets/images/cold-bg.jpg') no-repeat center;
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+  transition: 0.3s ease-in-out;
+
+  .app-notification {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+  }
+}
+
+.app.warn {
+  background-image: url('./assets/images/warm-bg.jpg');
+}

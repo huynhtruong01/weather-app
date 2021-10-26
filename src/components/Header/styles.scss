@@ -1,0 +1,17 @@
+.app-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .app-input {
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    width: 90%;
+    font-size: 22px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #313131;
+    font-weight: 500;
+  }
+}
