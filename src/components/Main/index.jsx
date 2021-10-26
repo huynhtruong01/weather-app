@@ -14,9 +14,43 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }))
+
+const dateTime = (date) => {
+  const days = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
+  ]
+
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ]
+
+  return `${days[date.getDay()]} ${date.getDate()} ${
+    months[date.getMonth()]
+  } ${date.getFullYear()}`
+}
+
 function Main(props) {
   const { weathers, loading, hire } = props
   const { name, main, weather } = weathers
+  const date = new Date()
+
   const classes = useStyles()
   console.log(weather)
   return (
@@ -30,7 +64,7 @@ function Main(props) {
         <div className="main-container">
           <div className="main-title">
             <div className="main-city">{name}</div>
-            <div className="main-date">Saturday 11 January 2020</div>
+            <div className="main-date">{dateTime(date)}</div>
           </div>
           <div className="main-temperature">
             <div className="detail-temperature">{Math.ceil(main.temp)}ºC</div>
